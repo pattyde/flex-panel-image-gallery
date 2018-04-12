@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+  background-attachment: #ffc600;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.panel {
+  background: #6b0f9c;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FireFox transitionend event.propertyName === flex-grow */
+  transition:
+    font-size 0.7 cubic-bezier(0.60, -0.20, 0.7, -0.11),
+    flex: 0.7s cubic-bezier(0.60, -0.20, 0.7, -0.11),
+    background: 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.panel1 {
+  background-image: url(http://patrickdeyoung.me/assets/brian_waddington_hut-9beea36bd1c6e46300f1bb5f87c5d54caea47e1ef13b77aec609b707db591167.JPG);
+}
+
+.panel2 {
+  background-image: url(http://patrickdeyoung.me/assets/golden_ears-110d77a93bdcb782cd7eb77dda9e3e68982e1f00627b1cb7e93e5d879dfb78df.JPG);
+}
+
+.panel3 {
+  background-image: url(http://patrickdeyoung.me/assets/panorama_ridge-045f4020a17c36ab8a58100f5e346d1ab592bf8bc0528c0ca4032d3c0086275a.jpg);
+}
+
+.panel4 {
+  background-image: url(http://patrickdeyoung.me/assets/helmcken_falls-c2924f09de536eeaf334bfc16a7f19ab6b74a0d4341ecbb37b7c1672b1d0cd68.jpg);
+}
+
+.panel5 {
+  background-image: url(http://patrickdeyoung.me/assets/garibaldi_lake-04c48b8d794a54d1b2a25f4f99dc45551616d7339ec7c813a5844b06535152d1.JPG);
+}
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.panel p {
+  text-transform: uppercase;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  font-size: 40px;
+}
